@@ -1,0 +1,2 @@
+class FilmViewer < ApplicationRecord
+end
