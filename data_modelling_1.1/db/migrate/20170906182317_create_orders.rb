@@ -1,9 +1,10 @@
-class CreateOrder < ActiveRecord::Migration[5.1]
+class CreateOrders < ActiveRecord::Migration[5.1]
   def change
     create_table :orders do |t|
       t.integer :order_number
-      t.integer :date
+      t.date :date
       t.integer :customer_id
+      t.timestamps
     end
   end
 end
