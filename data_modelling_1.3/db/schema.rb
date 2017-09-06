@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170906194914) do
+ActiveRecord::Schema.define(version: 20170906195259) do
 
   create_table "dental_offices", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dentists", force: :cascade do |t|
+    t.string "name"
+    t.integer "exp"
+    t.integer "dental_office_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
